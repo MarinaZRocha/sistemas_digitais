@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tOP_LEVEL is
+generic 
+(
+	tamanho : integer := 7 
+);
+port
+(
+	button, reset: in std_logic;
+	saida: out std_logic_vector(tamanho downto 0)
+);
+end tOP_LEVEL;
+	

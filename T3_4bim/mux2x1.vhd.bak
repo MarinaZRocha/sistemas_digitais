@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux2x1 is
+port
+(
+	S in std_logic;
+	A, B : in std_logic_vector;
+	X: out std_logic_vector
+);
+end jk;
+
+architecture mux2x1 of mux2x1 is
+
+
+
+ begin  
+
+ 
+ end process;
+  
+
+ end comportamento;  

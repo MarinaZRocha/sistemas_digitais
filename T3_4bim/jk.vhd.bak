@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity jk is
+port
+(
+	j, k, CLK, reset : in std_logic;
+	Q, nQ : out std_logic
+);
+end jk;
+
+architecture comportamento of jk is
+
+signal qx : std_logic;
+begin
+	process(CLK)
+		begin
+			if reset = '1' then qx <= '0';
+			end if;
+			if CLK = '1'then --subida
+				if (j = '0' and k = '0') then qx <= qx;
+				elsif (j = '0' and k = '1') then qx <= '0';
+				elsif (j = '1' and k = '0') then qx <= '1';
+				elsif (j = '1' and k = '1') then qx <= not qx;
+				end if;
+			end if;
+		end process;
+		Q <= qx;
+		nQ <= not qx;
+		
+end comportamento;

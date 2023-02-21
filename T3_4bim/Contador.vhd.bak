@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+-----------------------------------------------
+---------------Entidade------------------------
+entity Contador is
+
+generic 
+(
+	tamanho : integer := 7
+);
+
+port
+(
+	j, k, CLK, reset : in std_logic;
+	Q, nQ : out std_logic_vector(tamanho downto 0)
+);
+end circuito;
+
+architecture comportamento of Contador is
+-----------------------------------------------
+-----------------------------------------------
+
+-----------------------------------------------
+---------------COMPONENT-----------------------
+component jk is
+port
+(
+	j, k, CLK, reset : in std_logic;
+	Q, nQ : out std_logic
+);
+end component;
+-----------------------------------------------
+-----------------------------------------------
+
+
+
+begin
+
+gen_auto : for i in 0 to tamanho generate
+
+FF_jk : jk port map
+		(
+		j => j, k => k, CLK => , reset => reset,
+		Q => Q(i), nQ => nQ(i)CLK
+		);
+
+
+
+end generate gen_auto;
+ 
+		
+end comportamento;
