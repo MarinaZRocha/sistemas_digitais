@@ -1,0 +1,7 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.ALL;
+
+entity FSM is 
+port (ent, clk, rst : in std_logic; s : out std_logic);
+end FSM;
