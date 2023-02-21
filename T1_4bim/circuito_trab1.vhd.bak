@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity circuito_trab1 is
+	port (a, b, cin : in std_logic; s, cout : out std_logic);
+	end circuito_FA;
+	
+architecture comportamento of circuito_trab1 is 
+
+signal x,y,z : std_logic;
+
+begin 
+
+x <= a XOR b;
+s <= x XOR cin;
+y <= x AND cin;
+z <= a AND b;
+cout <= y OR z;
+
+end comportamento;
